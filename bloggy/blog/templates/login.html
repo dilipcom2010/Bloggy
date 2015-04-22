@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+	
+{% block content %}
+	<form role="form" action="/login/" method="post" style="margin-top:150px; margin-left:35%; margin-right:35%; width:30%">
+		{% csrf_token %}
+		<div class="form-group">
+			<input type="text" name="username" class="form-control input-lg" placeholder="Username" required>
+		</div>
+		<div class="form-group">
+			<input type="password" name="password" class="form-control input-lg" placeholder="password" required>
+		</div>
+		<div class="form-group">
+			<input type="submit" value="Login" class="form-control btn btn-primary input-lg btn-lg">
+		</div>
+	</form>
+{% endblock %}
